@@ -1,33 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class MissionCard extends Component {
+class MissionCard extends React.Component {
   render() {
-    const { name, year, country, destination } = this.props;
+    const { name, year, country, destination } = this.props; // sempre colocar o prop-types
     return (
       <div data-testid="mission-card">
-        <p data-testid="mission-name">
-          {name}
-        </p>
-        <p data-testid="mission-year">
-          {year}
-        </p>
-        <p data-testid="mission-country">
-          {country}
-        </p>
-        <p data-testid="mission-destination">
-          {destination}
-        </p>
+        <p data-testid="mission-name">{name}</p>
+        <p data-testid="mission-year">{year}</p>
+        <p data-testid="mission-country">{country}</p>
+        <p data-testid="mission-destination">{destination}</p>
       </div>
     );
   }
 }
-
 MissionCard.propTypes = {
   name: PropTypes.string.isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
   country: PropTypes.string.isRequired,
-  destination: PropTypes.string.isRequired,
+  destination: PropTypes.number.isRequired,
 };
-
 export default MissionCard;

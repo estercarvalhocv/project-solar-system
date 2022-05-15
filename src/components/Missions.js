@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Title from './Title';
 import missions from '../data/missions';
 import MissionCard from './MissionsCard';
 
-class Missions extends Component {
+class Missions extends React.Component {
   render() {
     return (
       <div data-testid="missions">
         <Title headline="Missões" />
-        {missions.map((mission) => (<MissionCard
-          key={ mission.name }
-          name={ mission.name }
-          year={ mission.year }
-          country={ mission.country }
-          destination={ mission.destination }
-        />))}
+        {missions.map((missao) => (
+          <MissionCard
+            key={ missao.name }
+            name={ missao.name }
+            year={ missao.year }
+            country={ missao.country }
+            destination={ missao.destination }
+          />))}
       </div>
     );
   }
 }
-
 export default Missions;
