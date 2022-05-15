@@ -8,8 +8,10 @@ class App extends React.Component {
       <>
         <Header />
         <SolarSystem />
+
       </>
     );
   }
 }
+// starting project
 export default App;
